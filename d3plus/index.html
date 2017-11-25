@@ -5,6 +5,7 @@
 <script src="//d3plus.org/js/d3plus.js"></script>
 
 <div id="viz"></div>
+<div id="viz2"></div>
 
 <script>
   var data = "https://raw.githubusercontent.com/aaizemberg/vis/gh-pages/graduados/data.tsv";
@@ -19,5 +20,15 @@
     .time("año")
     .shape({"interpolate":"monotone"})
 
+    .draw()
+  
+  d3plus.viz()
+    .container("#viz2")
+    .data(data)
+    .type("share")
+    .format("es_ES")
+    .id("titulo")
+    .size("cant")
+    .time("año")
     .draw()
 </script>
